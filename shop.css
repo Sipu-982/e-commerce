@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
+
+:root{
+    --bg1: rgb(255, 255, 255);
+    --color1: hwb(0 0% 100%);
+    --color2: rgb(255, 0, 4);
+    --font1: 1.8rem;
+    --font2: 1.1em;
+    --font3: 2.7rem;
+    --width: 1550px;
+    --font-style: "Poppins",sans-serif;
+}
+html,body{
+    scroll-behavior: smooth;
+    width: 100%;
+    background-color: rgba(222, 221, 221, 0.993);
+    overflow-x: hidden;
+}
+section{
+   max-width: var(--width);
+    min-height: 100vh;
+    padding: 4rem auto;
+    margin:10px 30px;
+    background-color: var(--bg1);
+}
+a{
+    text-decoration: none;
+}
+.first-nav{
+    position: absolute;
+    top: 0;
+    left: 0;
+   width: 100%;
+   height: 40px;
+    background-color: var(--color1);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 100;
+    position: fixed;
+}
+.first-nav .para p{
+ color: var(--bg1);
+ font-family: "Roboto",sans-serif;
+ font-size: 1rem;
+}
+.first-nav .para a{
+    color: var(--bg1);
+    padding: 0 15px;
+    text-decoration: underline;
+}
+select{
+    background: transparent;
+    border: none;
+    color: var(--bg1);
+    font-size: 0.9em;
+}
+select optgroup:hover{
+    color: var(--bg1);
+    background-color: var(--color1);
+}
+.logo a{
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--color1);
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+  
+}
+.navbar{
+  position: absolute;
+  top: 38px;
+  left: 0;
+ width: 100%;
+ height: 40px;
+    padding: 20px 10px;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    background-color: var(--bg1);
+    box-shadow: 15px 0 15px 0 rgba(135, 135, 135, 0.993);
+    overflow:hidden;
+}
+
+.nav-items .hamburger{
+    display: none;
+}
+.nav-items .nav-links{
+    display: inline-flex;
+    gap: 30px;
+}
+.nav-items .nav-links a{
+    color: var(--color1);
+    font-family: var(--font-style);
+}
+.nav-items .nav-links a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: var(--color1);
+    transition: width .3s;
+}
+ .nav-items .nav-links a:hover::after {
+    width: 100%;
+}
+.nav-icons{
+    display: inline-flex;
+    gap: 35px;
+}
+.nav-icons i{
+    color: var(--color1);
+}
+.searchbar{
+    position: relative;
+}
+.searchbar input{
+   height: 30px;
+   width: 250px;
+   border: none;
+   padding: 0 15px;
+   background-color: rgba(143, 142, 142, 0.1);
+   border-radius: 5px;
+}
+
+.searchbar #glass{
+    position: absolute;
+    top: 8px;
+    right: 15px;
+
+}
+.nav-icons{
+    gap: 15px;
+}
+.search-icon{
+    display: none;
+}
+/* Mobile Responsive */
+@media screen and (max-width:700px){
+    .first-nav{
+        height: 50px;
+    }
+    .first-nav .para p{
+        font-size: 16px;
+    }
+    .navbar{
+        justify-content: space-around;
+    }
+   .nav-items .hamburger{
+        display: block;
+    }
+   .nav-items .nav-links{
+        display: none;
+    }
+    .searchbar input,#glass{
+        display: none;
+    }
+    .search-icon{
+        display: block;
+    }
+}
+
+/* Hero Container */
+.hero{
+  min-height: 70vh;
+  max-width: var(--width);
+  margin-top: 4rem;
+}
+
+.container{
+ display: flex;
+ gap: 70px;
+ padding: 5rem 0;
+ height: 450px;
+}
+
+.hero-container{
+  display: flex;
+  width: 68%;
+  justify-content: space-around;
+  align-items: center;
+  background-color: var(--color1);
+  border-radius: 15px;
+}
+.phone-img img{
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+}
+.vertical-nav{
+  padding-left: 80px;
+  width: 250px;
+ margin-right: 15px;
+}
+.vertical-nav ul li{
+  padding: 10px 0;
+  list-style-type: none;
+}
+
+.vertical-nav ul li a{
+  font-size: var(--font2);
+  color: var(--color1);
+}
+.hero-content{
+  padding: 5rem 0;
+  font-family: "Roboto",sans-serif;
+  color: var(--bg1);
+}
+.title{
+  padding: 35px 0;
+}
+.logo span{
+ padding: 0 15px;
+}
+.title h2{
+  font-size: var(--font3);
+  line-height: 25px;
+}
+
+/* Product card */
+header{
+    width: 98%;
+    height: 60px;
+    margin: 0 auto;
+    /*background: gray;*/
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    justify-content: space-between;
+    border-bottom: 2px solid #ddd;
+}
+header p span{
+    font-size: 40px;
+    margin: 0 5px;
+    cursor: pointer;
+    color: #555;
+     width: 30px;
+    height: 30px;
+    display: inline-block;
+    line-height: 19px;
+    text-align: center;
+    border-radius: 3px;
+}
+header p span:hover{
+    background: #222;
+    color: white;
+}
+.products{
+  min-height: 75vh;
+  display: flex;
+align-items: center;
+overflow-x: auto;
+}
+
+

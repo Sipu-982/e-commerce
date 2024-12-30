@@ -1,0 +1,165 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto",sans-serif;
+}
+
+/* main section */
+
+.auth-container{
+   
+    width: 100%;
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.signup-container{
+    padding: 5rem 0;
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    min-height: 500px;
+    gap: 50px;
+}
+/* Mobile responsive */
+@media screen and (max-width:700px){
+    .signup-container{
+     flex-direction: column;
+     width: 100%;
+     
+    }
+   
+}
+@media screen and (min-width:701px) and (max-width: 1023px){
+    .signup-container{
+        flex-direction: column;
+        width: 100%;
+        
+       }
+     
+}
+.img-left{
+    width: calc(100% - 5%);
+    min-height: 400px;
+    object-fit: cover;
+}
+.img-left img{
+   width: 105%;
+   height: 100%;
+}
+.signup-content{
+    padding: 0 40px;
+}
+
+.signup-content{
+    width: calc(100% - 10%);
+}
+.form-title{
+    line-height: 35px;
+    padding: 10px 0;
+}
+.form-title h2{
+    font-size: 2rem;
+    letter-spacing: 2px;
+    color: rgb(0, 0, 0,0.8);
+}
+.form-title h3{
+    color: rgb(0, 0, 0,0.8);
+    letter-spacing: 1px;
+}
+.input-field{
+    padding: 18px 0;
+   position: relative;
+}
+.toggle-btn {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 18px;
+    color: #494747;
+  }
+  
+  .toggle-btn:hover {
+    color: rgba(252, 0, 13, 0.7);
+  }
+  ::placeholder{
+    font-size: 1.1em;
+ }
+.input-field input{
+   
+    padding: 5px 0;
+  background: none;
+   border: none;
+   outline: none;
+    border-bottom: 1px solid rgb(9, 0, 0);
+    width: 100%;
+    min-width: 250px;
+}
+.submit{
+    margin: 15px 0;
+    width: 100%;
+    min-width: 250px;
+    padding: 9px 20px;
+    border: none;
+    outline: none;
+    background-color: rgb(251, 55, 55);
+    color: #fff;
+    transition: 0.5s;
+
+}
+.submit:hover{
+    background-color: red;
+}
+button{
+    cursor: pointer;
+}
+.social-icon .google{
+width: 100%;
+ min-width: 250px;
+ padding: 9px 20px;
+ background: #fff;
+ border: 1px solid rgba(0, 0, 0,0.3);
+ position: relative;
+ transition: 0.5s;
+
+}
+.social-icon{
+    position: relative;
+}
+.form-content .social-icon img{
+    min-width: 18px;
+    max-height: 18px;
+    position: absolute;
+    left: 28%;
+    top: 8px;
+ }
+
+ .social-icon .google:hover{
+    background-color: rgba(0, 0, 0,0.2);
+ }
+ .login-link{
+    padding: 25px 0;
+ }
+ .login-link p a{
+    border-bottom: 1px solid purple;
+    margin: 0 15px;
+ }
+
+ @media screen and (max-width:700px){
+    .form-content .social-icon img{
+        position: absolute;
+        left: 15%;
+    }
+ }
+ @media screen and (min-width:701px) and (max-width: 1023px){
+    .form-content .social-icon img{
+        position: absolute;
+        left: 30%;
+    }
+ }
